@@ -6,10 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+- Fix models.json cache location ([#3052](https://github.com/nomic-ai/gpt4all/pull/3052))
+
+## [3.4.0] - 2024-10-08
+
 ### Added
 - Add bm25 hybrid search to localdocs ([#2969](https://github.com/nomic-ai/gpt4all/pull/2969))
 - LocalDocs support for .docx files ([#2986](https://github.com/nomic-ai/gpt4all/pull/2986))
-- Add support for attaching Excel spreadsheet to chat ([#3007](https://github.com/nomic-ai/gpt4all/pull/3007))
+- Add support for attaching Excel spreadsheet to chat ([#3007](https://github.com/nomic-ai/gpt4all/pull/3007), [#3028](https://github.com/nomic-ai/gpt4all/pull/3028))
 
 ### Changed
 - Rebase llama.cpp on latest upstream as of September 26th ([#2998](https://github.com/nomic-ai/gpt4all/pull/2998))
@@ -24,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Fix "regenerate" always forgetting the most recent message ([#3011](https://github.com/nomic-ai/gpt4all/pull/3011))
 - Fix loaded chats forgetting context when there is a system prompt ([#3015](https://github.com/nomic-ai/gpt4all/pull/3015))
 - Make it possible to downgrade and keep some chats, and avoid crash for some model types ([#3030](https://github.com/nomic-ai/gpt4all/pull/3030))
+- Fix scroll positition being reset in model view, and attempt a better fix for the clone issue ([#3042](https://github.com/nomic-ai/gpt4all/pull/3042))
 
 ## [3.3.1] - 2024-09-27 ([v3.3.y](https://github.com/nomic-ai/gpt4all/tree/v3.3.y))
 
@@ -146,7 +152,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Fix several Vulkan resource management issues ([#2694](https://github.com/nomic-ai/gpt4all/pull/2694))
 - Fix crash/hang when some models stop generating, by showing special tokens ([#2701](https://github.com/nomic-ai/gpt4all/pull/2701))
 
-[Unreleased]: https://github.com/nomic-ai/gpt4all/compare/v3.3.0...HEAD
+[Unreleased]: https://github.com/nomic-ai/gpt4all/compare/v3.4.0...HEAD
+[3.4.0]: https://github.com/nomic-ai/gpt4all/compare/v3.3.0...v3.4.0
 [3.3.1]: https://github.com/nomic-ai/gpt4all/compare/v3.3.0...v3.3.1
 [3.3.0]: https://github.com/nomic-ai/gpt4all/compare/v3.2.1...v3.3.0
 [3.2.1]: https://github.com/nomic-ai/gpt4all/compare/v3.2.0...v3.2.1

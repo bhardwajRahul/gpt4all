@@ -45,7 +45,7 @@ public:
         buffer.open(QIODevice::ReadOnly);
         const QString md = XLSXToMD::toMarkdown(&buffer);
         buffer.close();
-        return md;
+        return u"## Attached: %1\n\n%2"_s.arg(file(), md);
     }
 
     bool operator==(const PromptAttachment &other) const { return url == other.url; }
@@ -65,8 +65,8 @@ struct ChatItem
     Q_PROPERTY(bool thumbsDownState MEMBER thumbsDownState)
     Q_PROPERTY(QList<ResultInfo> sources MEMBER sources)
     Q_PROPERTY(QList<ResultInfo> consolidatedSources MEMBER consolidatedSources)
-    Q_PROPERTY(QList<PromptAttachment> promptAttachments MEMBER promptAttachments);
-    Q_PROPERTY(QString promptPlusAttachments READ promptPlusAttachments);
+    Q_PROPERTY(QList<PromptAttachment> promptAttachments MEMBER promptAttachments)
+    Q_PROPERTY(QString promptPlusAttachments READ promptPlusAttachments)
 
 public:
     QString promptPlusAttachments() const
